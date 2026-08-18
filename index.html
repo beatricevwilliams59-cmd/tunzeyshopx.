@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TUNZEYSHOPX — Shop smart. Shop bold. Shop luxury." />
+  <title>TUNZEYSHOPX | Luxury Online Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">TUNZEY<span>SHOPX</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="actions"><button aria-label="Search">⌕</button><button aria-label="Account">♙</button><button id="cartBtn" aria-label="Cart">🛒 <b id="cartCount">0</b></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div><p class="eyebrow">WELCOME TO TUNZEYSHOPX</p><h1>Shop <em>bold.</em><br/>Live luxury.</h1><p class="hero-text">Discover carefully selected products made for your style, comfort, and everyday moments.</p><a class="cta" href="#shop">Shop now →</a></div>
+      <div class="hero-card"><span>NEW COLLECTION</span><strong>Elevate<br/>your style.</strong></div>
+    </section>
+
+    <section id="shop" class="section"><div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured products</h2></div><a href="#shop">View all →</a></div><div class="products" id="products"></div></section>
+
+    <section id="about" class="feature"><div><p class="eyebrow">THE TUNZEYSHOPX EXPERIENCE</p><h2>Luxury without the complication.</h2><p>Simple browsing, beautiful products, secure checkout, and customer-first support — all in one modern shopping experience.</p></div><div class="feature-grid"><article><b>01</b><h3>Curated</h3><p>Products selected with style and quality in mind.</p></article><article><b>02</b><h3>Secure</h3><p>A checkout experience designed with trust in mind.</p></article><article><b>03</b><h3>Simple</h3><p>Fast, clean and easy shopping across every screen.</p></article></div></section>
+
+    <section id="blog" class="section"><p class="eyebrow">FROM THE BLOG</p><h2>Ideas & inspiration</h2><div class="blog"><article><span>STYLE</span><h3>How to make your everyday look feel premium</h3><p>Simple ways to elevate your personal style.</p></article><article><span>SHOPPING</span><h3>Smart shopping starts with the right choices</h3><p>Discover a better way to shop online.</p></article><article><span>TUNZEY</span><h3>Welcome to a new kind of online store</h3><p>Meet the vision behind TUNZEYSHOPX.</p></article></div></section>
+
+    <section id="contact" class="contact"><div><p class="eyebrow">GET IN TOUCH</p><h2>We'd love to hear from you.</h2><p>Have a question about an order or product? Send us a message.</p></div><form onsubmit="event.preventDefault(); alert('Thanks! Your message has been received.'); this.reset();"><input required type="text" placeholder="Your name"/><input required type="email" placeholder="Email address"/><textarea required rows="5" placeholder="Your message"></textarea><button class="cta" type="submit">Send message →</button></form></section>
+  </main>
+
+  <footer><div class="logo">TUNZEY<span>SHOPX</span></div><p>Shop smart. Shop bold. Shop luxury.</p><p>© 2026 TUNZEYSHOPX. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
