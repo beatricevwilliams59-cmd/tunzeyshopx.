@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your TUNZEYSHOPX customer account." />
+  <title>Create Account | TUNZEYSHOPX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#f8f6f1,#ebe6dc 52%,#d7c6ae);color:#181818;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;padding:30px}.card{width:min(520px,100%);background:#fffdf9;border:1px solid #ded8cd;border-radius:14px;padding:42px;box-shadow:0 25px 70px #55483a25}.logo{display:block;text-align:center;font-weight:700;letter-spacing:2px;font-size:22px;text-decoration:none;color:#181818}.logo span{font-weight:400;color:#b28a3e}.eyebrow{text-align:center;font-size:11px;letter-spacing:3px;color:#a57c32;font-weight:700;margin:34px 0 8px}.title{text-align:center;font-family:'Playfair Display',serif;font-size:42px;font-weight:500;margin:0 0 10px}.intro{text-align:center;color:#777;line-height:1.6;margin:0 auto 28px;max-width:390px}.form{display:flex;flex-direction:column;gap:14px}label{font-size:13px;font-weight:600;margin-bottom:-7px}input{width:100%;padding:15px;border:1px solid #d7d2c9;border-radius:4px;background:#fff;font:inherit;outline:none}input:focus{border-color:#b28a3e;box-shadow:0 0 0 3px #b28a3e18}.password-wrap{position:relative}.password-wrap input{padding-right:70px}.show{position:absolute;right:8px;top:8px;border:0;background:transparent;padding:8px;color:#8b6b35;cursor:pointer;font-weight:600}.terms{font-size:12px;color:#777;line-height:1.5;display:flex;gap:8px;align-items:flex-start;margin-top:2px}.terms input{width:auto;margin-top:3px}.terms a{color:#a57c32}.button{border:0;background:#191919;color:#fff;padding:16px;border-radius:4px;font:inherit;font-weight:700;cursor:pointer;margin-top:4px}.button:hover{background:#a57c32}.message{text-align:center;font-size:13px;margin:16px 0 0;min-height:18px}.login{text-align:center;color:#777;font-size:13px;margin:22px 0 0}.login a{color:#a57c32;font-weight:700}.back{text-align:center;display:block;margin-top:18px;font-size:13px;color:#777}.back:hover,.login a:hover{color:#a57c32}@media(max-width:500px){.card{padding:30px 22px}.title{font-size:35px}}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <a class="logo" href="index.html">TUNZEY<span>SHOPX</span></a>
+    <p class="eyebrow">WELCOME TO THE FAMILY</p>
+    <h1 class="title">Create your account</h1>
+    <p class="intro">Join TUNZEYSHOPX to make shopping faster and easier.</p>
+
+    <form class="form" id="signupForm">
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+
+      <label for="phone">Phone number</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+234 800 000 0000" />
+
+      <label for="password">Password</label>
+      <div class="password-wrap"><input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" minlength="8" required /><button class="show" type="button" onclick="togglePassword('password',this)">Show</button></div>
+
+      <label for="confirm">Confirm password</label>
+      <div class="password-wrap"><input id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Enter password again" minlength="8" required /><button class="show" type="button" onclick="togglePassword('confirm',this)">Show</button></div>
+
+      <label class="terms"><input id="terms" type="checkbox" required /><span>I agree to the TUNZEYSHOPX terms and privacy policy.</span></label>
+      <button class="button" type="submit">Create Account →</button>
+    </form>
+
+    <p class="message" id="message"></p>
+    <p class="login">Already have an account? <a href="login.html">Log in</a></p>
+    <a class="back" href="index.html">← Back to shopping</a>
+  </main>
+
+  <script>
+    function togglePassword(id,button){const input=document.getElementById(id);const visible=input.type==='text';input.type=visible?'password':'text';button.textContent=visible?'Show':'Hide'}
+    document.getElementById('signupForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const password=document.getElementById('password').value;
+      const confirm=document.getElementById('confirm').value;
+      const message=document.getElementById('message');
+      if(password!==confirm){message.textContent='Passwords do not match.';message.style.color='#a33';return}
+      message.textContent='Account form completed successfully. Connect a secure authentication service to store customer accounts.';
+      message.style.color='#6b5428';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
